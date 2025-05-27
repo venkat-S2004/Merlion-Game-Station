@@ -1,0 +1,11 @@
+{
+  "name": "Merlion games Web",
+  "short_name": "MERLION GAMES",
+  "description": "GAME STATION",
+  "start_url": "/MERLION GAMES/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#317EFB"
+}
