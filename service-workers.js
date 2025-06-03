@@ -24,7 +24,7 @@ const urlsToCache = [
   "/img/menu2.jpg",
   "/img/menu3.jpg",
   "/img/sivakumar.png",
-  "/img/harsha.png",
+  "/img/hrasha.png",
   "/img/whatsapp.png",
   "/img/PS2.png",
   "/img/ps4.webp",
