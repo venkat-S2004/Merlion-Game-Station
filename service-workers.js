@@ -29,6 +29,7 @@ const urlsToCache = [
   "/img/ps4.webp",
   "/img/ps5.png",
   "/img/xbox1.png",
+  "/img/vr.jpg",
   "/ved/game.mp4",
   "/ved/gamevd.mp4",
   "/ved/video.mp4",
