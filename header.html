@@ -25,11 +25,55 @@
   }
 
   .navbar-toggler {
-    border: none;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    padding: 5px;
   }
 
+  /* Custom Hamburger to X */
   .navbar-toggler-icon {
-    filter: invert(1) brightness(2); /* White icon */
+    display: inline-block;
+    width: 30px;
+    height: 22px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .bar {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #00ffee;
+    border-radius: 2px;
+    transition: 0.3s ease-in-out;
+  }
+
+  .bar1 {
+    top: 0;
+  }
+
+  .bar2 {
+    top: 9px;
+  }
+
+  .bar3 {
+    bottom: 0;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .bar1 {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .bar2 {
+    opacity: 0;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .bar3 {
+    transform: rotate(-45deg);
+    bottom: 9px;
   }
 
   /* Brand image smaller on mobile */
@@ -47,24 +91,21 @@
     <a class="navbar-brand d-flex align-items-center" href="index.html">
       <img src="img/logo.png" alt="Logo" width="50" height="50" class="me-2" />
       <span>
-        <img src="img/logo1.png" alt="Logo" class="logo1" width="240" height="25" />
+        <img src="img/logo1.png" alt="Logo Text" class="logo1" width="240" height="25" />
       </span>
     </a>
 
-    <!-- Hamburger Menu -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
+    <!-- Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+      </span>
     </button>
 
-    <!-- Menu Items -->
+    <!-- Navigation Links -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
