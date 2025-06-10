@@ -25,55 +25,29 @@
   }
 
   .navbar-toggler {
-    border: none !important;
-    box-shadow: none !important;
-    outline: none !important;
-    padding: 5px;
+    border: none;
+    background: none;
+    outline: none;
   }
 
-  /* Custom Hamburger to X */
-  .navbar-toggler-icon {
-    display: inline-block;
+  .navbar-toggler .toggler-icon {
     width: 30px;
-    height: 22px;
-    position: relative;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .bar {
-    display: block;
-    position: absolute;
     height: 3px;
-    width: 100%;
     background-color: #00ffee;
-    border-radius: 2px;
-    transition: 0.3s ease-in-out;
+    margin: 6px 0;
+    transition: 0.4s;
   }
 
-  .bar1 {
-    top: 0;
+  .navbar-toggler.active .bar1 {
+    transform: rotate(45deg) translate(5px, 5px);
   }
 
-  .bar2 {
-    top: 9px;
-  }
-
-  .bar3 {
-    bottom: 0;
-  }
-
-  .navbar-toggler[aria-expanded="true"] .bar1 {
-    transform: rotate(45deg);
-    top: 9px;
-  }
-
-  .navbar-toggler[aria-expanded="true"] .bar2 {
+  .navbar-toggler.active .bar2 {
     opacity: 0;
   }
 
-  .navbar-toggler[aria-expanded="true"] .bar3 {
-    transform: rotate(-45deg);
-    bottom: 9px;
+  .navbar-toggler.active .bar3 {
+    transform: rotate(-45deg) translate(6px, -6px);
   }
 
   /* Brand image smaller on mobile */
@@ -95,17 +69,15 @@
       </span>
     </a>
 
-    <!-- Toggle Button -->
+    <!-- Hamburger Button -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon">
-        <span class="bar bar1"></span>
-        <span class="bar bar2"></span>
-        <span class="bar bar3"></span>
-      </span>
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="customToggler">
+      <div class="toggler-icon bar1"></div>
+      <div class="toggler-icon bar2"></div>
+      <div class="toggler-icon bar3"></div>
     </button>
 
-    <!-- Navigation Links -->
+    <!-- Navigation Items -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -118,3 +90,10 @@
     </div>
   </div>
 </nav>
+
+<script>
+  const toggler = document.getElementById('customToggler');
+  toggler.addEventListener('click', function () {
+    toggler.classList.toggle('active');
+  });
+</script>
