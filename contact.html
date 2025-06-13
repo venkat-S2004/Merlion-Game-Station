@@ -42,7 +42,6 @@
       color: #ffffff;
       text-shadow: 0 0 5px #00ffee, 0 0 10px #00ffee;
       animation: glow 3s ease-in-out infinite alternate;
-      
       text-align: center;
     }
 
@@ -83,7 +82,6 @@
       width: 25px;
       margin-right: 20px;
       display: inline-block;
-      
     }
 
     .address-link {
@@ -104,6 +102,27 @@
 
     .address-link:hover {
       color: #00ffee;
+    }
+
+    .map-responsive {
+      overflow: hidden;
+      padding-bottom: 70.25%;
+      margin-top: 30px;
+      position: relative;
+      height: 0;
+      border-radius: 12px;
+      transform: translateY(-8px);
+      box-shadow: 0 6px 30px rgba(0, 255, 255, 0.4);
+    }
+
+    .map-responsive iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      border: none;
+      border-radius: 12px;
     }
 
     footer {
@@ -134,42 +153,53 @@
 <section class="contact-section">
   <div class="container">
     <h1>Get in Touch</h1>
+    <div class="row">
+      <!-- Left Content -->
+      <div class="col-md-6">
+        <!-- Contact Info -->
+        <div class="section-title">Contact Details</div>
+        <div class="contact-info ps-1">
+          <div class="info-item">
+            <i class="bi bi-telephone-fill"></i>
+            <p><a href="tel:9585069933" class="text-white text-decoration-none text-start fs-6">+91 95850 69933</a></p>
+          </div>
+          <div class="info-item">
+            <i class="bi bi-envelope-fill"></i>
+            <p><a href="mailto:merliongame@gmail.com" class="text-white text-decoration-none text-start fs-6">merliongame@gmail.com</a></p>
+          </div>
+        </div>
 
-    <!-- Contact Info -->
-    <div class="section-title">Contact Details</div>
-    <div class="contact-info ps-1">
-      <div class="info-item">
-        <i class="bi bi-telephone-fill"></i>
-        <p><a href="tel:9585069933" class="text-white text-decoration-none text-start fs-6">+91 95850 69933</a></p>
+        <!-- Social Links -->
+        <div class="section-title">Follow Us</div>
+        <div class="social-icons ps-1 d-flex">
+          <a href="https://wa.me/9751511113" target="_blank">
+            <img src="img/whatsapp.png" alt="WhatsApp">
+          </a>
+          <a href="https://www.facebook.com/share/1E9HBFnRc1/" target="_blank">
+            <img src="img/fb.png" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/merlion_game_station?igsh=bXc2dWtscThsbjNj" target="_blank">
+            <img src="img/insta.png" alt="Instagram">
+          </a>
+        </div>
+
+        <!-- Address -->
+        <div class="section-title">Address</div>
+        <address>
+          <a href="https://maps.app.goo.gl/6NkcFiviiJCbcTbD6" target="_blank" class="address-link">
+            <i class="bi bi-geo-alt-fill text-start fs-6"></i>
+            Mettur Main Road,<br>Near Mettur Railway Gate,<br>Omalur,<br>Salem - 636455
+          </a>
+        </address>
       </div>
-      <div class="info-item">
-        <i class="bi bi-envelope-fill"></i>
-        <p><a href="mailto:merliongame@gmail.com" class="text-white text-decoration-none text-start fs-6">merliongame@gmail.com</a></p>
+
+      <!-- Right Map -->
+      <div class="col-md-6 mt-4 mt-md-0">
+        <div class="map-responsive">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3906.3366727175658!2d78.03328069999999!3d11.7413153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf9237aa6d8f5%3A0x2fd2f9e5b9048b3!2sMerlion%20Game%20Station%20-%20Game%20Center%20Omalur!5e0!3m2!1sen!2sin!4v1749805387441!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
       </div>
     </div>
-
-    <!-- Social Links -->
-    <div class="section-title">Follow Us</div>
-    <div class="social-icons ps-1 d-flex">
-      <a href="https://wa.me/9751511113" target="_blank">
-        <img src="img/whatsapp.png" alt="WhatsApp">
-      </a>
-      <a href="https://www.facebook.com/share/1E9HBFnRc1/" target="_blank">
-        <img src="img/fb.png" alt="Facebook">
-      </a>
-      <a href="https://www.instagram.com/merlion_game_station?igsh=bXc2dWtscThsbjNj" target="_blank">
-        <img src="img/insta.png" alt="Instagram">
-      </a>
-    </div>
-
-    <!-- Address -->
-    <div class="section-title">Address</div>
-    <address>
-      <a href="https://maps.app.goo.gl/sxorvsjbVBRt7hACA" target="_blank" class="address-link">
-        <i class="bi bi-geo-alt-fill text-start fs-6"></i>
-        Mettur Main Road,<br>Near Mettur Railway Gate,<br>Omalur,<br>Salem - 636455
-      </a>
-    </address>
   </div>
 </section>
 
